@@ -4,10 +4,9 @@
   </x-slot:heading>
 
     @foreach($jobs as $job)
-        <li class="hover:underline">
+        <li class="text-blue-700 hover:underline">
             <a href="/jobs/{{ $job['id'] }}">
                 <strong>{{ $job['title'] }}</strong> <br >
-                <small>{{ $job['description'] }}</small>
             </a>
         </li>
     @endforeach
