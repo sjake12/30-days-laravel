@@ -15,4 +15,9 @@ class Job extends Model {
       'title',
       'description'
     ];
+
+    public function employer(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(Employer::class);
+    }
 }

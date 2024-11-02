@@ -9,4 +9,9 @@ class Employer extends Model
 {
     /** @use HasFactory<\Database\Factories\EmployerFactory> */
     use HasFactory;
+
+  public function jobs(): \Illuminate\Database\Eloquent\Relations\HasMany
+  {
+    return $this->hasMany(Job::class);
+  }
 }
