@@ -10,5 +10,11 @@
                 <strong>{{ $job['title'] }}</strong> <br >
             </a>
         @endforeach
+
+        <div>
+            {{ $jobs->links() }}
+        </div>
     </div>
+
+
 </x-layout >
