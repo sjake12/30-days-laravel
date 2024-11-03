@@ -2,6 +2,7 @@
 
   namespace Database\Seeders;
 
+  use App\Models\Job;
   use App\Models\User;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -17,8 +18,10 @@
       // User::factory(10)->create();
 
       User::factory()->create([
-        'name' => 'Test User',
+        'name' => 'John Doe',
         'email' => 'test@example.com',
       ]);
+
+      Job::factory(200)->create();
     }
   }
