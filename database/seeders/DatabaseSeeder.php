@@ -1,27 +1,29 @@
 <?php
 
-  namespace Database\Seeders;
+namespace Database\Seeders;
 
-  use App\Models\Job;
-  use App\Models\User;
+use App\Models\Job;
+use App\Models\User;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-  use Illuminate\Database\Seeder;
+use Illuminate\Database\Seeder;
 
-  class DatabaseSeeder extends Seeder
-  {
+class DatabaseSeeder extends Seeder
+{
     /**
      * Seed the application's database.
      */
     public function run(): void
     {
-      // User::factory(10)->create();
+        // User::factory(10)->create();
 
-      User::factory()->create([
-        'name' => 'John Doe',
-        'email' => 'test@example.com',
-      ]);
+        User::factory()->create([
+            'first_name' => 'John',
+            'last_name' => 'Doe',
+            'email' => 'test@example.com',
+            'password' => bcrypt('password'),
+        ]);
 
-      Job::factory(200)->create();
+        Job::factory(200)->create();
     }
-  }
+}
