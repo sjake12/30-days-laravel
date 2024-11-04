@@ -10,8 +10,13 @@ class Employer extends Model
     /** @use HasFactory<\Database\Factories\EmployerFactory> */
     use HasFactory;
 
-  public function jobs(): \Illuminate\Database\Eloquent\Relations\HasMany
-  {
-    return $this->hasMany(Job::class);
-  }
+    public function jobs(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Job::class);
+    }
+
+    public function user(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
 }
